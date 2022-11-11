@@ -265,7 +265,7 @@ class Box_App
      */
     protected function checkAllowedURLs()
     {
-        $REQUEST_URI = $this->di['request']->getServer('REQUEST_URI');
+        $REQUEST_URI = $this->di['request']->getURI();
         $allowedURLs = $this->di['config']['maintenance_mode']['allowed_urls'];
         $rootUrl = $this->di['config']['url'];
 
@@ -323,7 +323,7 @@ class Box_App
      */
     protected function checkAdminPrefix()
     {
-        $REQUEST_URI = $this->di['request']->getServer('REQUEST_URI');
+        $REQUEST_URI = $this->di['request']->getURI();
         $adminPrefix = $this->di['config']['admin_area_prefix'];
         $rootUrl = $this->di['config']['url'];
 
